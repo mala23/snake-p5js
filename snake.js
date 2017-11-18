@@ -5,13 +5,13 @@ function Snake() {
   this.ySpeed = 0;
 
   this.update = function() {
-    this.x = this.x + this.xSpeed;
-    this.y = this.y + this.ySpeed;
+    this.x = this.x + this.xSpeed * gameScale;
+    this.y = this.y + this.ySpeed * gameScale;
   }
 
   this.show = function() {
     fill(255);
-    rect(this.x, this.y, 10, 10);
+    rect(this.x, this.y, gameScale, gameScale);
   }
 
   this.dir = function(x, y) {
