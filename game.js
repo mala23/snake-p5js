@@ -11,6 +11,18 @@ function draw() {
   snake.show();
 }
 
+function keyPressed() {
+  if (keyCode === 87) {
+    snake.dir(0, -1);
+  } else if (keyCode === 65) {
+    snake.dir(-1, 0);
+  } else if (keyCode === 83) {
+    snake.dir(0, 1);
+  } else if (keyCode === 68) {
+    snake.dir(1, 0);
+  }
+}
+
 function Snake() {
   this.x = 0;
   this.y = 0;
@@ -25,5 +37,10 @@ function Snake() {
   this.show = function() {
     fill(255);
     rect(this.x, this.y, 10, 10);
+  }
+
+  this.dir = function(x, y) {
+    this.xSpeed = x;
+    this.ySpeed = y;
   }
 }
