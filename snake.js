@@ -7,6 +7,9 @@ function Snake() {
   this.update = function() {
     this.x = this.x + this.xSpeed * gameScale;
     this.y = this.y + this.ySpeed * gameScale;
+
+    this.x = constrain(this.x, 0, width - gameScale);
+    this.y = constrain(this.y, 0, height - gameScale);
   }
 
   this.show = function() {
