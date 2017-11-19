@@ -21,6 +21,9 @@ function draw() {
   snake.update();
   snake.show();
 
+  if (snake.eat(food)) {
+    pickLocation();
+  } 
 
   fill(255, 0, 100);
   rect(food.x, food.y, gameScale, gameScale);

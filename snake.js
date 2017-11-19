@@ -22,4 +22,12 @@ function Snake() {
     this.ySpeed = y;
   }
 
+  this.eat = function(position) {
+    var d = dist(this.x, this.y, position.x, position.y);
+    if (d < 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
