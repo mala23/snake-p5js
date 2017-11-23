@@ -5,6 +5,7 @@ var gameScale = 20;
 function setup() {
   createCanvas(600, 600);
   frameRate(10);
+  startGame();
 }
 
 function startGame() {
