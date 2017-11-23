@@ -18,6 +18,7 @@ function pickLocation() {
 
 function draw() {
   background(51);
+  snake.deadYet();
   snake.update();
   snake.show();
 
@@ -37,6 +38,14 @@ function keyPressed() {
   } else if (keyCode === 83) {
     snake.dir(0, 1);
   } else if (keyCode === 68) {
+    snake.dir(1, 0);
+  } else if (keyCode === UP_ARROW) {
+    snake.dir(0, -1);
+  } else if (keyCode === LEFT_ARROW) {
+    snake.dir(-1, 0);
+  } else if (keyCode === DOWN_ARROW) {
+    snake.dir(0, 1);
+  } else if (keyCode === RIGHT_ARROW) {
     snake.dir(1, 0);
   }
 }
