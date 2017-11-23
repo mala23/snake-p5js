@@ -9,10 +9,10 @@ function setup() {
 
 function startGame() {
   snake = new Snake();
-  pickLocation();
+  createFood();
 }
 
-function pickLocation() {
+function createFood() {
   var cols = floor(width / gameScale);
   var rows = floor(height / gameScale);
   food = createVector(floor(random(cols)), floor(random(rows)));
@@ -26,7 +26,7 @@ function draw() {
   snake.show();
 
   if (snake.eat(food)) {
-    pickLocation();
+    createFood();
   } 
 
   fill(255, 0, 100);
