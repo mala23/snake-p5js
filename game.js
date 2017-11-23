@@ -4,8 +4,11 @@ var gameScale = 20;
 
 function setup() {
   createCanvas(600, 600);
-  snake = new Snake();
   frameRate(10);
+}
+
+function startGame() {
+  snake = new Snake();
   pickLocation();
 }
 
